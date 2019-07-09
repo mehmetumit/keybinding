@@ -2,9 +2,10 @@ package keybinding
 
 import (
 	"fmt"
-	"github.com/jroimartin/gocui"
 	"strings"
 	"unicode"
+
+	"github.com/awesome-gocui/gocui"
 )
 
 var translate = map[string]string{
