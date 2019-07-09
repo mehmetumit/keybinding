@@ -2,7 +2,8 @@ package main
 
 import (
 	"fmt"
-	"github.com/wagoodman/keybinding"
+
+	"github.com/awesome-gocui/keybinding"
 )
 
 func show(keyStr string) {
