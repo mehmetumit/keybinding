@@ -169,6 +169,23 @@ func ParseAll(input string) ([]Key, error) {
 	return ret, nil
 }
 
+
+func MustParse(input string) Key {
+	if key, err := Parse(input); err != nil {
+		panic(err)
+	} else {
+		return key
+	}
+}
+
+func MustParseAll(input string) []Key {
+	if key, err := ParseAll(input); err != nil {
+		panic(err)
+	} else {
+		return key
+	}
+}
+
 func (key Key) String() string {
 	displayTokens := make([]string, 0)
 	prefix := ""
