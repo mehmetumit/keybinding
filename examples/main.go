@@ -31,6 +31,7 @@ func must(keyStr string) {
 func main() {
 	fmt.Println("The show calls:")
 	show("ctrl+a")
+	show("q")
 	show("ctrl+b")
 	show("MouseLeft")
 	show("ctrl+/, tab")
