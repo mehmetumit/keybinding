@@ -127,9 +127,9 @@ func Parse(input string) (Key, error) {
 	f := func(c rune) bool { return unicode.IsSpace(c) || c == '+' }
 	tokens := strings.FieldsFunc(input, f)
 
-	if len(tokens) == 1 && len(tokens[0]) == 1 {
-		single := rune(tokens[0][0])
-		if unicode.IsLetter(single) {
+	if len(tokens) == 1 && len([]rune(tokens[0])) == 1 {
+		single := []rune(tokens[0])[0]
+		if unicode.IsPrint(single) {
 			return Key{single, gocui.ModNone, tokens}, nil
 		}
 	}
